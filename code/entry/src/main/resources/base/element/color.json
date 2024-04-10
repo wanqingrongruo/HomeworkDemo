@@ -3,6 +3,22 @@
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "tabBgColor",
+      "value": "#E7E7E7"
+    },
+    {
+      "name": "tab_normal_color",
+      "value": "#66666A"
+    },
+    {
+      "name": "tab_selected_color",
+      "value": "#000000"
     }
   ]
 }

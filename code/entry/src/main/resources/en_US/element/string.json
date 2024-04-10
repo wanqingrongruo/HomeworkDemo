@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "description"
     },
     {
       "name": "EntryAbility_desc",
@@ -10,7 +10,23 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "Homework Demo"
+    },
+    {
+      "name": "tab_movie",
+      "value": "Movie"
+    },
+    {
+      "name": "tab_ui",
+      "value": "UI"
+    },
+    {
+      "name": "tab_web",
+      "value": "Web"
+    },
+    {
+      "name": "tab_mine",
+      "value": "Mine"
     }
   ]
 }

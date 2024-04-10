@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "模块描述"
+      "value": "description"
     },
     {
       "name": "EntryAbility_desc",
@@ -10,7 +10,23 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "家庭作业"
+    },
+    {
+      "name": "tab_movie",
+      "value": "视频"
+    },
+    {
+      "name": "tab_ui",
+      "value": "UI"
+    },
+    {
+      "name": "tab_web",
+      "value": "Web"
+    },
+    {
+      "name": "tab_mine",
+      "value": "我的"
     }
   ]
 }

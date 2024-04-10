@@ -1,0 +1,16 @@
+{
+  "float": [
+    {
+      "name": "tab_height",
+      "value": "50vp"
+    },
+    {
+      "name": "tab_item_height",
+      "value": "40vp"
+    },
+    {
+      "name": "bar_font",
+      "value": "12fp"
+    }
+  ]
+}
