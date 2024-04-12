@@ -8,7 +8,7 @@ import { ListData } from '../network/NewsResult'
 struct NewsDetailPage {
   item: ListData = router.getParams()['item']
   private swiperController: SwiperController = new SwiperController()
-  private data: MyDataSource = new MyDataSource([])
+  private data: MyDataSource<string> = new MyDataSource([])
   @State statusHeight: number = 0
 
   isEmptyOrNull(str: string): Boolean {
@@ -152,11 +152,11 @@ struct NewsDetailPage {
   }
 }
 
-class MyDataSource implements IDataSource {
-  private list: string[] = []
+class MyDataSource<T> implements IDataSource {
+  private list: T[] = []
   private listener: DataChangeListener
 
-  constructor(list: string[]) {
+  constructor(list: T[]) {
     this.list = list
   }
 
