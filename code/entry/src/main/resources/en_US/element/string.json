@@ -13,6 +13,10 @@
       "value": "Homework Demo"
     },
     {
+      "name": "permission_network",
+      "value": "My application needs network request data"
+    },
+    {
       "name": "tab_movie",
       "value": "Movie"
     },
@@ -27,6 +31,10 @@
     {
       "name": "tab_mine",
       "value": "Mine"
+    },
+    {
+      "name": "http_error_message",
+      "value": "Network request failed, please try later!"
     }
   ]
 }

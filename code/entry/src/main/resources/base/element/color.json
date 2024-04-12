@@ -9,7 +9,11 @@
       "value": "#FFFFFF"
     },
     {
-      "name": "tabBgColor",
+      "name": "red",
+      "value": "#FF0000"
+    },
+    {
+      "name": "tab_separate_color",
       "value": "#E7E7E7"
     },
     {
@@ -19,6 +23,14 @@
     {
       "name": "tab_selected_color",
       "value": "#000000"
+    },
+    {
+      "name": "dividerColor",
+      "value": "#E2E2E2"
+    },
+    {
+      "name": "title_color",
+      "value": "#182431"
     }
   ]
 }

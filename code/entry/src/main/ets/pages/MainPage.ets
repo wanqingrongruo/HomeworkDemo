@@ -30,7 +30,7 @@ struct Index {
     .border({
       width: {top: 1, left: 0, right: 0, bottom: 0}
     })
-    .borderColor($r('app.color.tabBgColor'))
+    .borderColor($r('app.color.tab_separate_color'))
   }
 
   aboutToAppear() {
@@ -65,7 +65,7 @@ struct Index {
       .barPosition(BarPosition.End)
       .shadow({
         radius: 4,
-        color: $r('app.color.tabBgColor')
+        color: $r('app.color.tab_separate_color')
       })
       .onChange((index: number) => {
         this.currentIndex = index;

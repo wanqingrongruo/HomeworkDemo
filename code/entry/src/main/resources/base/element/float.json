@@ -11,6 +11,14 @@
     {
       "name": "bar_font",
       "value": "12fp"
+    },
+    {
+      "name": "desc_font",
+      "value": "12fp"
+    },
+    {
+      "name": "title_font",
+      "value": "14fp"
     }
   ]
 }

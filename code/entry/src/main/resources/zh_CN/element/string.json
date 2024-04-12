@@ -13,6 +13,10 @@
       "value": "家庭作业"
     },
     {
+      "name": "permission_network",
+      "value": "应用需要使用网络请求数据"
+    },
+    {
       "name": "tab_movie",
       "value": "视频"
     },
@@ -27,6 +31,10 @@
     {
       "name": "tab_mine",
       "value": "我的"
+    },
+    {
+      "name": "http_error_message",
+      "value": "网络请求失败，请稍后尝试！"
     }
   ]
 }
