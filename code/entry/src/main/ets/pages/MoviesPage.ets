@@ -21,7 +21,7 @@ export default struct MoviePage {
   private storageManager: KeyStorageManager
 
   // 获取网络数据
-  loadData(callback: Callback<Boolean>) {
+  loadData(callback: Homework.Callback<Boolean>) {
     let param = new NewParam(this.page);
     NewsApiManager.request(param).then((value: NewsResult) => {
       if (value.error_code == 0) {
@@ -208,8 +208,4 @@ class NewParam {
   constructor(page: number) {
     this.page = page;
   }
-}
-
-interface Callback<T> {
-  (T): void
 }

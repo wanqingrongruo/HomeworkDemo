@@ -9,6 +9,9 @@ import distributedKVStore from '@ohos.data.distributedKVStore'
  * 对 Promise的使用可能不成熟, 待进一步学习后改进
  */
 
+// 类型别名
+type BooleanCallback = () => string;
+
 export default class KeyStorageManager {
   private config: distributedKVStore.KVManagerConfig;
   // 只能包含字母数字或者下划线, 否则会报错
@@ -34,7 +37,7 @@ export default class KeyStorageManager {
     }
   }
 
-  private createKVStore(callback: {(Boolean): void}) {
+  private createKVStore(callback: BooleanCallback) {
       if (this.kvStorage) {
         callback(true);
       } else {
@@ -43,6 +46,7 @@ export default class KeyStorageManager {
             callback(false);
             return;
           }
+
           this.kvStorage = store as distributedKVStore.SingleKVStore;
           callback(true);
         });

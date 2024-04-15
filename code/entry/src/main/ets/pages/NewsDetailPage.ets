@@ -9,7 +9,7 @@ struct NewsDetailPage {
   item: ListData = router.getParams()['item']
   private swiperController: SwiperController = new SwiperController()
   private data: MyDataSource<string> = new MyDataSource([])
-  @State statusHeight: number = 0
+  @State private statusHeight: number = 0
 
   isEmptyOrNull(str: string): Boolean {
     if (str) {
