@@ -1,15 +1,21 @@
 import Constants from '../common/constants/Constants';
+import PreferencesManager from '../common/utils/PreferencesManager';
 import TabItemModel from '../viewmodel/TabItemModel';
 import MinePage from './MinePage';
 import MoviesPage from './MoviesPage';
 import UIPage from './UIPage';
 import WebPage from './WebPage';
 
+
+
 @Entry
 @Component
 struct Index {
   @State currentIndex: number = 0;
+  @State currentTabIndex: number = 0;
   @State tabBarArray: TabItemModel[] = TabItemModel.getDefaultTabs();
+  private preferencesManager: PreferencesManager = new PreferencesManager(getContext(this), "TabHistoryCurrentIndex");
+  private tabCurrentIndexKey = "tabCurrentIndexKey";
 
   @Builder TabBuilder(index: number) {
     Column() {
@@ -34,7 +40,10 @@ struct Index {
   }
 
   aboutToAppear() {
-
+       this.preferencesManager.getData(this.tabCurrentIndexKey, 0).then((value) => {
+         this.currentIndex = value;
+         this.currentTabIndex = value;
+      });
   }
 
   onPageShow() {
@@ -43,7 +52,9 @@ struct Index {
 
   build() {
     Column() {
-      Tabs() {
+      Tabs( {
+        index: this.currentTabIndex
+      }) {
         ForEach(this.tabBarArray, (tabItem: TabItemModel, index?: number) => {
           TabContent() {
             if (tabItem.index == 0) {
@@ -69,6 +80,7 @@ struct Index {
       })
       .onChange((index: number) => {
         this.currentIndex = index;
+        this.preferencesManager.putData(this.tabCurrentIndexKey, index);
       })
     }
     .width(Constants.FULL_PERCENT)

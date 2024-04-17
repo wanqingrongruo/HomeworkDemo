@@ -1,5 +1,6 @@
 
 import distributedKVStore from '@ohos.data.distributedKVStore'
+import { Callback } from './CallBackType';
 
 /**
  * 分布式键值数据库 管理器
@@ -10,7 +11,7 @@ import distributedKVStore from '@ohos.data.distributedKVStore'
  */
 
 // 类型别名
-type BooleanCallback = () => string;
+type BooleanCallback = (Boolean) => string;
 
 export default class KeyStorageManager {
   private config: distributedKVStore.KVManagerConfig;
@@ -37,7 +38,7 @@ export default class KeyStorageManager {
     }
   }
 
-  private createKVStore(callback: BooleanCallback) {
+  private createKVStore(callback: Callback<Boolean>) {
       if (this.kvStorage) {
         callback(true);
       } else {

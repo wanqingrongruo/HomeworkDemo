@@ -2,9 +2,9 @@ import Constants from '../common/constants/Constants';
 import NewsResult, { ListData } from '../network/NewsResult';
 import { PullToRefresh } from '@ohos/pulltorefresh'
 import NewsApiManager from '../network/NewsApiManager';
-import distributedKVStore from '@ohos.data.distributedKVStore';
 import KeyStorageManager from '../common/utils/KeyStorageManager';
 import router from '@ohos.router';
+import { Callback } from '../common/utils/CallBackType';
 
 @Component
 export default struct MoviePage {
@@ -21,7 +21,7 @@ export default struct MoviePage {
   private storageManager: KeyStorageManager
 
   // 获取网络数据
-  loadData(callback: Homework.Callback<Boolean>) {
+  loadData(callback: Callback<Boolean>) {
     let param = new NewParam(this.page);
     NewsApiManager.request(param).then((value: NewsResult) => {
       if (value.error_code == 0) {

@@ -7,8 +7,12 @@ declare var EmptyCallback: () => void
 declare var BoolCallback: (value: Boolean) => void
 
 // 防止命名冲突, 用 namespace 包裹一层
-declare namespace Homework{
+export declare namespace Homework {
   interface Callback<T> {
       (T): void
   }
+}
+
+export interface Callback<T> {
+  (T): void
 }

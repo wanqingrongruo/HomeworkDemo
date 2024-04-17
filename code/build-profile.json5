@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.cer",
+          "storePassword": "0000001BC86D37972F445EDBF7D4A9CE4588317559EA97ABBE16690973BB3D10BE4D366AA7FC303764A1AE",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B663640C2C0C97C6E0127E85F8E71A6C9E07BD78E7852AA496C09788032161EE44CAF47330BE3B9",
+          "profile": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [
