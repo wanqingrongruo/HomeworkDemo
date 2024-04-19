@@ -78,6 +78,7 @@ struct Index {
         radius: 4,
         color: $r('app.color.tab_separate_color')
       })
+      .scrollable(false)
       .onChange((index: number) => {
         this.currentIndex = index;
         this.preferencesManager.putData(this.tabCurrentIndexKey, index);

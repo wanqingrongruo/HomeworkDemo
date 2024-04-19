@@ -74,21 +74,23 @@ struct WebDetailPage {
       Image($r('app.media.background'))
         .parentSize()
       Column() {
-        Navigator({ target: "pages/WebPage", type: NavigationType.Back }) {
-          Row() {
-            Image($r('app.media.ic_back'))
-              .width(Constants.WebConstant_IMAGE_WIDTH)
-              .height(Constants.WebConstant_IMAGE_HEIGHT)
-              .margin({ left: Constants.WebConstant_IMAGE_MARGIN_LEFT })
+        Row() {
+          Image($r('app.media.ic_back'))
+            .width(Constants.WebConstant_IMAGE_WIDTH)
+            .height(Constants.WebConstant_IMAGE_HEIGHT)
+            .margin({ left: Constants.WebConstant_IMAGE_MARGIN_LEFT })
 
-            Text('返回')
-              .fontSize(Constants.WebConstant_TOP_TEXT_FONT_SIZE)
-              .width(Constants.WebConstant_TOP_TEXT_WIDTH)
-              .height(Constants.WebConstant_TOP_TEXT_HEIGHT)
-              .fontColor($r('app.color.black'))
-              .margin({ left: Constants.WebConstant_TOP_TEXT_MARGIN_LEFT })
-          }.height(Constants.WebConstant_TOP_ROW_HEIGHT)
+          Text('返回')
+            .fontSize(Constants.WebConstant_TOP_TEXT_FONT_SIZE)
+            .width(Constants.WebConstant_TOP_TEXT_WIDTH)
+            .height(Constants.WebConstant_TOP_TEXT_HEIGHT)
+            .fontColor($r('app.color.black'))
+            .margin({ left: Constants.WebConstant_TOP_TEXT_MARGIN_LEFT })
         }
+        .height(Constants.WebConstant_TOP_ROW_HEIGHT)
+        .onClick(() => {
+          router.back();
+        })
 
         Web({ src: this.params['path'], controller: this.webController })
           .zoomAccess(false)
