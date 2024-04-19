@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/MainPage",
-    "pages/NewsDetailPage"
+    "pages/NewsDetailPage",
+    "pages/WebDetailPage"
   ]
 }

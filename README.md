@@ -2,11 +2,22 @@
 鸿蒙学习 demo, 高级开发者认证作业
 
 作业旨在实操
-1. 完成 web 交互
 
 ## 作业2
 1. 每次打开 app 显示上一次启动 app 最后切换停留的 tab 
-2. 加载本地html 页面
+2. 完成第三个 tab, web tab 的 UI
+
+web tab的 内容: 
+1. 设置导航, 构建两个相同样式不同文字的按钮, ui 样式见截图, 有导航标题 和菜单按钮 => 使用 @Styles 和 @Extend 对相同样式进行定义并考虑怎么跨文件使用, Navigation使用
+2. 点击跳转到新页面分别加载本地 html 和 远端网页(www.baidu.com), UI 见截图, 使用 Navigator 实现跳转 => web组件的使用, Navigator 使用
+3. 完成本地 html 的交互, 原生调用 js 方法: startDraw,  js 调用原生方法: 对象 name: Toast, 方法名: fly, 传递参数: { msg: "xxx"} => web 与原生的交互
+
+
+
+资料:
+见压缩包
+注意关于本地 html 资源包含  index.html, index.js, index.css, 以及 img 资源, 解压后放入 rawfile 文件夹下, 各层目录保留(目录详情见截图, 具体原因可以查看 index.js 代码, 关于交互部分也可查看 js 代码) 
+
 
 
 ## 作业1 
