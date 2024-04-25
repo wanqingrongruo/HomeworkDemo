@@ -1,14 +1,15 @@
 import dataPreferences from '@ohos.data.preferences';
 import { Callback } from './CallBackType';
+import common from '@ohos.app.ability.common';
 
 type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean>;
 
 export default class PreferencesManager {
-  private context: Context;
+  private context: common.Context;
   private name: string;
   private preferencesInstance: dataPreferences.Preferences;
 
-  constructor(context: Context, name: string) {
+  constructor(context: common.Context, name: string) {
     this.context = context;
     this.name = name;
   }

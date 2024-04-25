@@ -3,6 +3,11 @@
 
 作业旨在实操
 
+## 作业3
+
+功能点:
+1. 窗口使用: https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/js-apis-window-0000001477981397-V2
+
 ## 作业2
 1. 每次打开 app 显示上一次启动 app 最后切换停留的 tab 
 2. 完成第三个 tab, web tab 的 UI

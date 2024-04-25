@@ -2,6 +2,7 @@
   "src": [
     "pages/MainPage",
     "pages/NewsDetailPage",
-    "pages/WebDetailPage"
+    "pages/WebDetailPage",
+    "pages/LoginPage"
   ]
 }
