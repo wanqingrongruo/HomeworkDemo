@@ -60,7 +60,7 @@ export default class WindowManager {
 
     this.windowStage.getMainWindow().then((window: window.Window) => {
       // 全屏显示
-      window.setWindowLayoutFullScreen(true);
+      window.setWindowLayoutFullScreen(false);
       // 状态栏 导航栏显示
       window.setWindowSystemBarEnable(['status', 'navigation']);
       // 设置 导航栏状态栏属性

@@ -1,3 +1,4 @@
+import hilog from '@ohos.hilog';
 import Constants from '../common/constants/Constants';
 import PreferencesManager from '../common/utils/PreferencesManager';
 import TabItemModel from '../viewmodel/TabItemModel';
@@ -94,6 +95,9 @@ struct Index {
   }
 
   aboutToDisappear() {
-
+    // 清除 tab index 的缓存
+    let preferencesManager: PreferencesManager = new PreferencesManager(getContext(this), "TabHistoryCurrentIndex");
+    preferencesManager.delete("tabCurrentIndexKey")
+    hilog.info(0x0000, 'zwx', '%{public}s', `mainpage hhhhh`);
   }
 }

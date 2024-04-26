@@ -1,4 +1,5 @@
 import dataPreferences from '@ohos.data.preferences';
+import hilog from '@ohos.hilog';
 import { Callback } from './CallBackType';
 
 type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean>;
@@ -30,6 +31,7 @@ export default class PreferencesManager {
       this.createPreferences((isSuccess) => {
         if (this.preferencesInstance) {
           this.preferencesInstance.get(key, defaultValue).then((value: T) => {
+            hilog.info(0x0000, 'zwx', '%{public}s', `读取数据: key: ${key}, value = ${value}`);
             resolve(value);
           }).catch((e) => {
             console.error(`获取 value 失败. Code: ${e.code}, message: ${e.message}`)
@@ -44,6 +46,7 @@ export default class PreferencesManager {
     return new Promise((resolve: Function, reject: Function) => {
       this.createPreferences((isSuccess) => {
         if (this.preferencesInstance) {
+          hilog.info(0x0000, 'zwx', '%{public}s', `保存数据: key: ${key}, value = ${value}`);
           this.preferencesInstance.put(key, value);
           this.flush()
           resolve();
@@ -91,7 +94,10 @@ export default class PreferencesManager {
       this.createPreferences((isSuccess) => {
         if (this.preferencesInstance) {
           this.preferencesInstance.delete(key).then((err) => {
-            resolve(err != null);
+            let isSuccess = err == null;
+            resolve(isSuccess);
+            hilog.info(0x0000, 'zwx', '%{public}s', `删除数据: key: ${key}, isSucc: ${isSuccess}`);
+            this.flush();
           }).catch((e) => {
             resolve(false);
           });

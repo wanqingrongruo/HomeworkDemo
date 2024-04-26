@@ -31,17 +31,17 @@ export default struct MinePage {
         .onClick(() => {
             this.userManager.clear().then((value) => {
               if(value) {
-                // 清除 tab index 的缓存
-                let preferencesManager: PreferencesManager = new PreferencesManager(getContext(this), "TabHistoryCurrentIndex");
-                preferencesManager.delete("tabCurrentIndexKey")
-
-                WindowManager.getInstance().setMainWindowImmersive();
-                // 切换到登录页
-                router.replaceUrl({
-                  url: "pages/LoginPage"
-                }).catch((err: Error) => {
-                  // error handle
-                });
+                  WindowManager.getInstance().setMainWindowImmersive();
+                  // 切换到登录页
+                  router.replaceUrl({
+                    url: "pages/LoginPage"
+                  }).then(() => {
+                    // 清除 tab index 的缓存
+                    let preferencesManager: PreferencesManager = new PreferencesManager(getContext(this), "TabHistoryCurrentIndex");
+                    preferencesManager.delete("tabCurrentIndexKey")
+                  }).catch((err: Error) => {
+                    // error handle
+                  });
               }
             })
         });
@@ -49,6 +49,7 @@ export default struct MinePage {
     .backgroundColor($r('app.color.white'))
     .height(Constants.FULL_PERCENT)
     .width(Constants.FULL_PERCENT)
+    .justifyContent(FlexAlign.Center)
   }
 }
 
