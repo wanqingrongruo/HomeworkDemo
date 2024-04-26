@@ -57,4 +57,7 @@ export default class Constants {
   static readonly WebConstant_PROGRESS_WIDTH: number = 80;
   static readonly WebConstant_PROGRESS_POSITION_X: string = '40%';
   static readonly WebConstant_PROGRESS_POSITION_Y: string = '30%';
+
+  // event hud
+  static readonly STARTMAINPAGE = "startMainPage"
 }

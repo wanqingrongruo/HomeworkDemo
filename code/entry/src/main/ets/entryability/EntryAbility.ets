@@ -5,7 +5,7 @@ import { UserCacheManager } from '../common/utils/User';
 import WindowManager from '../common/utils/WindowManager';
 
 export default class EntryAbility extends UIAbility {
-  userManager: UserCacheManager = new UserCacheManager(this.context);
+  userManager: UserCacheManager
 
   onCreate(want, launchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
@@ -18,6 +18,7 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
     // Main window is created, set main page for this ability
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    this.userManager = new UserCacheManager(this.context);
     let windowManager = WindowManager.getInstance();
     windowManager.setWindowStage(windowStage);
 

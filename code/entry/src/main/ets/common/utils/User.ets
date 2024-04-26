@@ -1,15 +1,18 @@
 import PreferencesManager from './PreferencesManager'
-import common from '@ohos.app.ability.common';
 
 export class User {
   name: string
+
+  constructor(name: string) {
+    this.name = name;
+  }
 }
 
 export class UserCacheManager {
-  context: common.Context
+  context: Context
   private manager: PreferencesManager
 
-  constructor(context: common.Context) {
+  constructor(context: Context) {
     this.context = context
     this.manager = new PreferencesManager(context, "user")
   }
@@ -31,5 +34,9 @@ export class UserCacheManager {
         reject(e);
       })
     });
+  }
+
+  clear(): Promise<boolean> {
+    return this.manager.delete("userinfo");
   }
 }

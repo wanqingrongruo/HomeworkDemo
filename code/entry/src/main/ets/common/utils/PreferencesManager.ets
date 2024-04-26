@@ -1,27 +1,26 @@
 import dataPreferences from '@ohos.data.preferences';
 import { Callback } from './CallBackType';
-import common from '@ohos.app.ability.common';
 
 type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean>;
 
 export default class PreferencesManager {
-  private context: common.Context;
+  private context: Context;
   private name: string;
   private preferencesInstance: dataPreferences.Preferences;
 
-  constructor(context: common.Context, name: string) {
+  constructor(context: Context, name: string) {
     this.context = context;
     this.name = name;
   }
 
   private createPreferences(callback: Callback<Boolean>) {
-    dataPreferences.getPreferences(this.context, this.name, (err, prefercences) => {
+    dataPreferences.getPreferences(this.context, this.name, (err, preferences) => {
       if (err) {
         callback(false);
         return;
       }
 
-      this.preferencesInstance = prefercences as dataPreferences.Preferences;
+      this.preferencesInstance = preferences as dataPreferences.Preferences;
       callback(true);
     })
   }
@@ -87,7 +86,7 @@ export default class PreferencesManager {
     });
   }
 
-  delete(key): Promise<Boolean> {
+  delete(key): Promise<boolean> {
     return new Promise((resolve: Function, reject: Function) => {
       this.createPreferences((isSuccess) => {
         if (this.preferencesInstance) {
