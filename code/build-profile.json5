@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "certpath": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.cer",
-          "storePassword": "0000001BC86D37972F445EDBF7D4A9CE4588317559EA97ABBE16690973BB3D10BE4D366AA7FC303764A1AE",
+          "storePassword": "0000001A41766EBE824036911789908D085AE49E8F8163A8F88E5036EEFA57F5535DBC4C6D31CE18ED65",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B663640C2C0C97C6E0127E85F8E71A6C9E07BD78E7852AA496C09788032161EE44CAF47330BE3B9",
+          "keyPassword": "0000001AE638B89598876961C4033C09E922855D193B9E03F74953B4C66DBA4F3D973FCFB1F3A188F73B",
           "profile": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.p12"
