@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.cer",
-          "storePassword": "0000001A14257774617F0A94DFB69F70A6B8AD3CC009941A19997F7F82321CDA83F87FB3606A600B1E02",
-          "keyAlias": "debugKey",
-          "keyPassword": "0000001AD6CEB22B454BE08BC7E785141D05E41B6CA2120D10542B794C74916A151875B064231FD5739A",
-          "profile": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.p7b",
+          "storePassword": "0000001EAC95963EF555FAA156BFE81C10E379B2790C3E50C2426144E4E257E654C6C15D47070B95DC63BB986A7C",
+          "certpath": "/Users/roni/Downloads/%E5%AE%B6%E5%BA%AD%E4%BD%9C%E4%B8%9A.cer",
+          "keyAlias": "debugp12",
+          "keyPassword": "0000001E0DEF5A3FA6019524F4E13CB11A4A9E543AA05B9AEBAF006A39F01F18DEBCF202BCD2C2CE2750AC135765",
+          "profile": "/Users/roni/Downloads/%E5%AE%B6%E5%BA%AD%E4%BD%9C%E4%B8%9ADebug.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "/Users/roni/.ohos/config/auto_debug_code_com.roni.homeworkdemo_30086000649719426.p12"
+          "storeFile": "/Users/roni/Desktop/me/harmony/HomeworkDemo/sign files/debug.p12"
         }
       }
     ],
